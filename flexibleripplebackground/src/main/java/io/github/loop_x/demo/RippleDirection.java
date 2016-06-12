@@ -1,4 +1,4 @@
-package io.github.loop_x.flexibleripplebackground;
+package io.github.loop_x.demo;
 
 public enum RippleDirection {
     EXPAND, SHRINK

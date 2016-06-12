@@ -1,4 +1,4 @@
-package io.github.loop_x.flexibleripplebackground;
+package io.github.loop_x.demo;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

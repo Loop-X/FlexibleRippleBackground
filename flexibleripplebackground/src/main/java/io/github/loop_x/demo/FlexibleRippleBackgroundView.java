@@ -1,4 +1,4 @@
-package io.github.loop_x.flexibleripplebackground;
+package io.github.loop_x.demo;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -114,8 +114,15 @@ public class FlexibleRippleBackgroundView extends View implements ViewTreeObserv
 
         mPaint.setColor(rippleBuilder.getRippleColor());
 
+        // Start Ripple Animation
+        startRippleAnimation(rippleBuilder);
+    }
+
+    private void startRippleAnimation(RippleBuilder rippleBuilder) {
+
         ObjectAnimator rippleAnimation = ObjectAnimator.ofFloat(this, "rippleRadius",
                 rippleBuilder.getStartRippleRadius(), rippleBuilder.getFinishRippleRadius());
+
         rippleAnimation.setDuration(350);
         rippleAnimation.setInterpolator(new DecelerateInterpolator());
         rippleAnimation.addListener(new AnimatorListenerAdapter() {
@@ -144,8 +151,8 @@ public class FlexibleRippleBackgroundView extends View implements ViewTreeObserv
                 }
             }
         });
-        rippleAnimation.start();
 
+        rippleAnimation.start();
     }
 
 }

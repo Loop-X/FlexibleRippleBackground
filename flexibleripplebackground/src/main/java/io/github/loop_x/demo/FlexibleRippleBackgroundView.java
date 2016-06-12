@@ -123,7 +123,7 @@ public class FlexibleRippleBackgroundView extends View implements ViewTreeObserv
         ObjectAnimator rippleAnimation = ObjectAnimator.ofFloat(this, "rippleRadius",
                 rippleBuilder.getStartRippleRadius(), rippleBuilder.getFinishRippleRadius());
 
-        rippleAnimation.setDuration(350);
+        rippleAnimation.setDuration(rippleBuilder.getDuration());
         rippleAnimation.setInterpolator(new DecelerateInterpolator());
         rippleAnimation.addListener(new AnimatorListenerAdapter() {
             @Override

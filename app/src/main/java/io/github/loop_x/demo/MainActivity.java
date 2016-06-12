@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         if (isOn) {
             tvA.startRipple(new RippleBuilder(this)
                     .setRippleColor(Color.RED)
+                    .setDuration(1000)
                     .setStartRippleRadius(0f)
                     .setFinishRippleRadius(tvA.getWidth())
                     .setRipplePivotX(btnA.getX() + btnA.getWidth() / 2)
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             tvA.startRipple(new RippleBuilder(this)
                     .setRippleColor(Color.YELLOW)
+                    .setDuration(1000)
                     .setStartRippleRadius(tvA.getWidth())
                     .setFinishRippleRadius(0f)
                     .setRipplePivotX(btnA.getX() + btnA.getWidth() / 2)

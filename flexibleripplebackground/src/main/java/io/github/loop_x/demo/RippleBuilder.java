@@ -9,6 +9,7 @@ public class RippleBuilder {
 
     private int rippleColor;
     private int backgroundColor;
+    private int duration; // ms
     private float ripplePivotX;
     private float ripplePivotY;
     private float finishRippleRadius;
@@ -22,6 +23,7 @@ public class RippleBuilder {
         backgroundColor = -1;
         rippleDirection = RippleDirection.EXPAND;
         startRippleRadius = 0;
+        duration = 350;
     }
 
     public RippleBuilder setRippleColor(int rippleColor) {
@@ -31,6 +33,11 @@ public class RippleBuilder {
 
     public RippleBuilder setBackgroundColor(int backgroundColor) {
         this.backgroundColor = backgroundColor;
+        return this;
+    }
+
+    public RippleBuilder setDuration(int duration) {
+        this.duration = duration;
         return this;
     }
 
@@ -70,6 +77,10 @@ public class RippleBuilder {
 
     public int getBackgroundColor() {
         return backgroundColor;
+    }
+
+    public int getDuration() {
+        return duration;
     }
 
     public float getRipplePivotX() {

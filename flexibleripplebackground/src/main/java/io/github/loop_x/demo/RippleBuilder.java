@@ -3,6 +3,9 @@ package io.github.loop_x.demo;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 
+/**
+ * Class to build style of ripple
+ */
 public class RippleBuilder {
 
     private Context mContext;
@@ -14,14 +17,12 @@ public class RippleBuilder {
     private float ripplePivotY;
     private float finishRippleRadius;
     private float startRippleRadius;
-    private RippleDirection rippleDirection;
     private Drawable backgroundDrawable;
 
     public RippleBuilder(Context context) {
         this.mContext = context;
 
         backgroundColor = -1;
-        rippleDirection = RippleDirection.EXPAND;
         startRippleRadius = 0;
         duration = 350;
     }
@@ -38,11 +39,6 @@ public class RippleBuilder {
 
     public RippleBuilder setDuration(int duration) {
         this.duration = duration;
-        return this;
-    }
-
-    public RippleBuilder setRippleDirection(RippleDirection rippleDirection) {
-        this.rippleDirection = rippleDirection;
         return this;
     }
 
@@ -103,7 +99,4 @@ public class RippleBuilder {
         return backgroundDrawable;
     }
 
-    public RippleDirection getRippleDirection() {
-        return rippleDirection;
-    }
 }

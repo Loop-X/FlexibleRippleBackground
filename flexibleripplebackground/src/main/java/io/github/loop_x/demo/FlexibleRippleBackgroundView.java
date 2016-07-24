@@ -118,6 +118,10 @@ public class FlexibleRippleBackgroundView extends View implements ViewTreeObserv
         startRippleAnimation(rippleBuilder);
     }
 
+    /*
+    Private Functions
+     */
+
     private void startRippleAnimation(RippleBuilder rippleBuilder) {
 
         ObjectAnimator rippleAnimation = ObjectAnimator.ofFloat(this, "rippleRadius",
